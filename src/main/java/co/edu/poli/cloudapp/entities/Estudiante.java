@@ -1,0 +1,39 @@
+package co.edu.poli.cloudapp.entities;
+
+import java.time.LocalDate;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Table(name="estudiantes")
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class Estudiante {
+    
+    @Id
+    @Column(name="id_estudiante")
+    private Long idEstudiante;
+
+    @Column(name="nom_estudiante")
+    private String nomEstudiante;
+
+    @Column(name="ape_estudiante")
+    private String apeEstudiante;
+
+    @Column(name="fecha_nacimiento")
+    private LocalDate fechaNacimiento;
+
+    @Column(name="email")
+    private String email;
+}
