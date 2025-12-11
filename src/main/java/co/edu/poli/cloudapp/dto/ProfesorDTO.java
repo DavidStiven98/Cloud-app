@@ -1,6 +1,5 @@
 package co.edu.poli.cloudapp.dto;
 
-
 import java.time.LocalDate;
 
 import lombok.AllArgsConstructor;
@@ -13,12 +12,11 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder    
-
-public class EstudianteDTO {
-    private Long idEstudiante;
-    private String nomEstudiante;
-    private String apeEstudiante;
+@Builder
+public class ProfesorDTO {
+    private Long idProfesor;
+    private String nomProfesor;
+    private String apeProfesor;
     private LocalDate fechaNacimiento;
     private String email;
 }
