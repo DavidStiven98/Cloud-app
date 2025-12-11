@@ -5,17 +5,19 @@ import java.util.Date;
 import javax.crypto.SecretKey;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 
+@Component
 public class JwtUtil {
-    private SecretKey key;
-    private long validityMs;
+    private final  SecretKey key;
+    private final  long validityMs;
     
-    public  JwtUtil(@Value("${app.jwt.secret:changeit}") String secrete,
+    public  JwtUtil(@Value("${app.jwt.secret:changeitchangeitchangeitchangeit}") String secrete,
     @Value("${app.jwt.validity-ms:3600000}") long  validityMs) {
         this.key = Keys.hmacShaKeyFor(secrete.getBytes());
         this.validityMs = validityMs;
